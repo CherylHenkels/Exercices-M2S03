@@ -9,6 +9,7 @@ function media(notas){
    
     for(let i=0; i<notas.length; i++){
         mediaCalc += notas[i];
+        console.log(mediaCalc);
     }
 
     mediaCalc = mediaCalc/notas.length;
@@ -69,6 +70,33 @@ function informacoesAluno(){
 }
 
 
+// Exercicio 6
+function capturaNotas(){
+    let nomeMateria = window.prompt("Digite o nome da matéria");
+    let i = 0
+    let notas = [];
+    while(i< 4){
+        notas[i] =parseFloat( window.prompt(`Digite a nota ${i + 1}`));
+        i++;
+    }
+
+    let dadosMateria = {
+        nomeMateria,
+        notas
+    };
+
+    // document.write(`
+    // <span>Matéria: <strong>${dadosMateria.nomeMateria}</strong></span><br>
+    // <span>Notas: <strong>[${dadosMateria.notas.join(", ")}]</strong></span><br>
+    // <span>media: <strong>[${media(dadosMateria.notas)}]</strong></span><br>`);
+
+    
+    return media(dadosMateria.notas);
+}
+
+
+
+
 
 
 
@@ -85,4 +113,6 @@ imprimirNomeAlunos(listaAlunos);
 
 tabuada();
 
-informacoesAluno();
+// informacoesAluno();
+
+console.log(capturaNotas());
