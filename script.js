@@ -94,6 +94,19 @@ function capturaNotas(){
     return media(dadosMateria.notas);
 }
 
+// Exercício 7
+
+function encontrarMaiorNumero(lista){
+    let maiorNumero = lista[0];
+    for(i=0; i<lista.length; i++){
+        if(lista[i]> maiorNumero){
+            maiorNumero = lista[i];
+        }
+    }
+
+    return maiorNumero;
+}
+
 
 
 
@@ -113,6 +126,9 @@ imprimirNomeAlunos(listaAlunos);
 
 tabuada();
 
-// informacoesAluno();
+informacoesAluno();
 
 console.log(capturaNotas());
+
+let numeros = [-1, -2, -3, -10,0, 2,434];
+console.log(encontrarMaiorNumero(numeros));
