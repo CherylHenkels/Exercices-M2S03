@@ -16,6 +16,15 @@ function media(notas){
     return mediaCalc;
 }
 
+// Exercicio 2
+function analiseMedia(media){
+    if(media>=7){
+        document.write("Parabéns você passou na média!")
+    }
+    else{
+        document.write("Infelizmente você está de recuperação.")
+    }
+}
 
 
 
