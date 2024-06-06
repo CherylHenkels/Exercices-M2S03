@@ -19,12 +19,21 @@ function media(notas){
 // Exercicio 2
 function analiseMedia(media){
     if(media>=7){
-        document.write("Parabéns você passou na média!")
+        document.write("Parabéns você passou na média! <br>")
     }
     else{
-        document.write("Infelizmente você está de recuperação.")
+        document.write("Infelizmente você está de recuperação. <br>")
     }
 }
+
+
+// Exercício 3
+function imprimirNomeAlunos(listaAlunos){
+    listaAlunos.forEach(element => {
+        document.write(element + "<br>");
+    });
+}
+
 
 
 
@@ -34,3 +43,8 @@ notas = [10,10,8,4];
 let mediaTeste = media(notas)
 console.log(mediaTeste);
 analiseMedia(mediaTeste);
+
+let listaAlunos = ['Ana', 'Bruna', 'Carlos', 'Diego'];
+imprimirNomeAlunos(listaAlunos);
+
+tabuada();
