@@ -34,6 +34,12 @@ function imprimirNomeAlunos(listaAlunos){
     });
 }
 
+// Exercicio 4
+function tabuada(){
+    for(i=0; i<=10; i++){
+        document.write("8 x " + i + " = " + 8*i + "<br>");
+    }
+}
 
 
 
