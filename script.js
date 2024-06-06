@@ -7,7 +7,7 @@ let notas = new Array(4).fill(0); // Using Array constructor I can create an arr
 function media(notas){
     let mediaCalc =0;
    
-    for(i=0; i<notas.length; i++){
+    for(let i=0; i<notas.length; i++){
         mediaCalc += notas[i];
     }
 
@@ -36,10 +36,40 @@ function imprimirNomeAlunos(listaAlunos){
 
 // Exercicio 4
 function tabuada(){
-    for(i=0; i<=10; i++){
+    for(let i=0; i<=10; i++){
         document.write("8 x " + i + " = " + 8*i + "<br>");
     }
 }
+
+// Exercício 5
+function informacoesAluno(){
+    let nome = window.prompt("Qual o nome do aluno?");
+    let idade = window.prompt("Qual a idade do aluno?");
+    let serie = window.prompt("Qual a série do aluno?");
+    let escola = window.prompt("Qual o nome da escola?");
+    let materia = window.prompt("Qual a sua matéria favorita?");
+
+    let confirma = window.confirm(`Você confirma as seguintes respostas? 
+    Nome do aluno: ${nome} 
+    Idade do aluno: ${idade} 
+    Serie do aluno: ${serie} 
+    Escola do aluno: ${escola} 
+    Materia favorita do aluno: ${materia} `)
+
+    if (confirma){
+    document.write(   
+        `<strong>Nome do aluno: </strong> ${nome} <br>
+        <strong> Idade do aluno:</strong> ${idade} anos <br>
+        <strong> Serie do aluno:</strong> ${serie}ª série<br>
+        <strong> Escola do aluno:</strong> ${escola} <br>
+        <strong> Materia favorita do aluno:</strong> ${materia} <br>`)
+    } else{
+        document.write("Os dados não foram confirmados")
+    }
+}
+
+
+
 
 
 
@@ -54,3 +84,5 @@ let listaAlunos = ['Ana', 'Bruna', 'Carlos', 'Diego'];
 imprimirNomeAlunos(listaAlunos);
 
 tabuada();
+
+informacoesAluno();
